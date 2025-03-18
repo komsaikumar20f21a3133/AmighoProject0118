@@ -1,0 +1,20 @@
+<!-- filepath: talking-robot-app/src/templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talking Robot</title>
+</head>
+<body>
+    <h1>Talking Robot</h1>
+    <button onclick="startRobot()">Start Robot</button>
+    <script>
+        function startRobot() {
+            fetch('/start')
+                .then(response => response.text())
+                .then(data => alert(data));
+        }
+    </script>
+</body>
+</html>
