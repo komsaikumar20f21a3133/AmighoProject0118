@@ -1,0 +1,6 @@
+[build]
+  publish = "static"
+  command = "flask digest compile && gunicorn app:app"
+
+[build.environment]
+  FLASK_ENV = "production"

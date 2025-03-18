@@ -1,8 +1,11 @@
+# filepath: c:\Users\Dell-saikumar\Desktop\AMIGHO-PROJECT\talking-robot-app\src\app.py
 from flask import Flask, render_template
+from flask_static_digest import FlaskStaticDigest
 from robot.robot import handleCommand
 import threading
 
 app = Flask(__name__)
+flask_static_digest = FlaskStaticDigest(app)
 
 @app.route('/')
 def index():
